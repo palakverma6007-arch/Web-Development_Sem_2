@@ -1,0 +1,15 @@
+body{
+    font-family:arial;
+    background:black;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.container{
+    background: white;
+    padding: 30px;
+    width: 320px;
+    border-radius: 20px;
+
+}
