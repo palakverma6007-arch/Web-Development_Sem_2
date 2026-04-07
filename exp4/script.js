@@ -1,35 +1,51 @@
-function calculateResult(){
-    let nos=document.getElementById("subject").value;
-    let total =0;
-    for(let i=1;i<=nos;i++){
-        let marks =parseFloat(prompt("entermarks for subjects"+i));
-        total=total+marks;
-    }
-    let average=total/nos;
-    let grade;
-    let result;
-    if(average>=90){
-        grade="A+";
-    }
-    else if(average>=75){
-        grade="A";
+function calculateresult() { 
+    let n = document.getElementById("subjects").value; 
+    let total = 0; 
 
-    }
-    else if(average>=60){
-        grade="B";
+    for (let i = 1; i <= n; i++) { 
+        let marks = parseFloat(prompt("Enter marks for subject " + i)); 
+        
+        // Validation
+        if (isNaN(marks)) {
+            alert("Please enter valid numeric marks!");
+            return;
+        }
 
-    }
-    else{
-        grade="C";
-    }
-    if(average>=40){
-        result="pass";
-    }
-    else{
-        result="fail";
-    }
-    document.getElementById("result").innerHTML="Total:"+total+"<br>"+"average:"+average+"<br>"+"Grade:"+grade+"<br>"+
-    "result:"+result;
-    
+        total += marks; 
+    } 
 
+    let average = total / n; 
+    let grade = "";
+    let result = ""; 
+
+    if (average >= 90) { 
+        grade = "A+"; 
+        result = "Pass"; 
+    } 
+    else if (average >= 75) { 
+        grade = "A"; 
+        result = "Pass"; 
+    } 
+    else if (average >= 60) { 
+        grade = "B"; 
+        result = "Pass"; 
+    } 
+    else if (average >= 50) { 
+        grade = "C"; 
+        result = "Pass"; 
+    } 
+    else if (average >= 40) { 
+        grade = "D"; 
+        result = "Pass"; 
+    } 
+    else { 
+        grade = "F";   
+        result = "Fail"; 
+    } 
+
+    document.getElementById("result").innerHTML =
+        "Total Marks: " + total + "<br>" +
+        "Average Marks: " + average.toFixed(2) + "<br>" +
+        "Grade: " + grade + "<br>" +
+        "Result: " + result;
 }
