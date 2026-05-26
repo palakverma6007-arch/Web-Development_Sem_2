@@ -1,0 +1,32 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial;
+}
+
+input {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 10px;
+}
